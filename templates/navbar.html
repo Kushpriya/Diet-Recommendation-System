@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">Dietify</a>
+            <button class="navbar-toggler" id="navbarToggler">
+                ☰
+            </button>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{{ url_for('about_us') }}" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="{{ url_for('contact_us') }}" class="nav-link">Contact Us</a></li>
+                {% if session.get('logged_in') %}
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Diet Plan Generator</a></li>
+                <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                {% else %}
+                <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
+                <li class="nav-item"><a href="{{ url_for('signup') }}" class="nav-link">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Diet Recommendation System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

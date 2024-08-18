@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <span id="icon-close" class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+        <!-- Login Form -->
+        <div class="form-box login active">
+            <h2>Login</h2>
+            <form id="login-form" action="/login" method="POST">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email</label>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="login-password" required>
+                    <span class="eye-icon" onclick="togglePassword('login-password')"><ion-icon name="eye-off"></ion-icon></span>
+                    <label for="login-password">Password</label>
+                    <div id="passwordError" class="error-message"></div>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="{{ url_for('forgot_password') }}">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="/signup" class="toggle-form">Sign up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+   
+</body>
+</html>

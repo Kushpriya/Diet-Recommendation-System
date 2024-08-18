@@ -1,0 +1,121 @@
+/* styles.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('/static/images/background1.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    padding: 10px 20px ;
+    max-width: 1200px;
+    margin:auto;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center; /* Center align text */
+}
+
+h1 {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-top: 10px;
+    font-weight: 700;
+
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #191e19;
+    border-bottom: 2px solid #141614;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.info .goal span {
+    color: #FF5733; /* Red color for goal */
+}
+
+ .info .bmr span, .info .tdee span, .info .total-calories span {
+    color: #000; /* Black color for numbers */
+}
+
+.info .goal , .info .bmr, .info .tdee, .info .total-calories {
+    color: #4CAF50; /* Green color for BMR, TDEE, and Total Calories labels */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button, .button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}

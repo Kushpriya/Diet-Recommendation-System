@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    {% extends 'navbar.html' %}
+    {% block content %}
+    <div class="home-section">
+        <h1>
+            <span>Welcome</span> 
+            <span>to</span> 
+            <span>Diet</span> 
+            <span>Recommendation</span> 
+            <span>System</span> 
+        </h1>   
+    </div>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    {% endblock %}
+
+</body>
+</html>

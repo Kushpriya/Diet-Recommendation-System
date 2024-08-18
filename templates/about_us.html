@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AI Diet Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_us.css') }}">
+   
+</head>
+
+<body>
+    {% extends 'navbar.html' %}
+
+    {% block content %}
+    <div class="about-container">
+        <img src="{{ url_for('static', filename='../static/images/about_us.png') }}" alt="Diet Recommendation System" class="about-image">
+        <div class="about-content">
+        <h1>About Us</h1>
+        <p>Welcome to the Diet Recommendation System, your personal guide to healthier eating habits. Our system leverages advanced machine learning algorithms to provide tailored dietary plans based on your unique preferences, nutritional needs, and health goals.</p>
+        <p>Our mission is to empower individuals to make informed dietary decisions by offering customized meal recommendations. Whether you're looking to lose weight, gain muscle, or maintain a balanced diet, our system adapts to your specific needs, ensuring that your dietary plan is as unique as you are.</p>
+        <p>We believe in the power of technology to transform lives. By combining the latest in machine learning with comprehensive nutritional data, we strive to help you achieve better health outcomes and lead a happier, more fulfilled life.</p>  
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</div>
+    {% endblock %}
+
+</body>
+</html> 
