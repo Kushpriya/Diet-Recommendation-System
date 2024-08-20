@@ -113,17 +113,20 @@ def contact_us():
 def login():
     if request.method == 'POST':
         session['logged_in'] = True 
-        return redirect(url_for('index'))  # Redirect to home page after login
+        return redirect(url_for('home'))  # Redirect to home page after login
     return render_template('login.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        return redirect(url_for('login'))  # Redirect to the login page
+        return redirect(url_for('login'))  
     return render_template('signup.html')
 
-
+@app.route('/logout')
+def logout():
+    session.pop('logged_in', None)
+    return redirect(url_for('login'))
 
 @app.route('/index')
 def index():
@@ -163,10 +166,7 @@ def create_new_password():
     return render_template('create_new_password.html')
 
 
-@app.route('/logout')
-def logout():
-    session.pop('logged_in', None)
-    return redirect(url_for('home'))
+
 
 @app.route('/recommend', methods=['POST'])
 def recommend():

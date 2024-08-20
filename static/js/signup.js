@@ -71,5 +71,5 @@ document.getElementById("signup-form").addEventListener("submit", function(event
       }
 
       document.getElementById("icon-close").addEventListener("click", function() {
-        window.location.href = "/"; // Redirect to home page
+        window.location.href = "/login"; // Redirect to home page
       });

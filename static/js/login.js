@@ -33,7 +33,7 @@ function handleLogin(email, password) {
 
     if (email === storedEmail && password === storedPassword) {
         alert("Login successful!");
-        window.location.href = "/index"; // Redirect to home or a dashboard
+        window.location.href = "/"; 
     } else {
         alert("Incorrect Email or Password");
     }
@@ -54,7 +54,3 @@ function togglePassword(passwordFieldId) {
     }
 }
 
-// Function to handle the close icon click
-document.getElementById("icon-close").addEventListener("click", function() {
-    window.location.href = "/"; // Redirect to home page
-});
